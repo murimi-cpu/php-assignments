@@ -16,8 +16,8 @@ if(!$conn){
 }
 else{
 
-    $user_name = "Ali";
-    $user_salary = "500000";
+    $emp_name = "Murimi James";
+    $emp_salary = "120,000";
     $sql = "UPDATE `tblemployee` SET `emp_name`='Murimi Gosiani',`emp_salary`='100000' WHERE 2";
     
     $result = mysqli_query($conn,$sql);
