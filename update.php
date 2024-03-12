@@ -18,7 +18,7 @@ else{
 
     $emp_name = "Murimi James";
     $emp_salary = "120,000";
-    $sql = "UPDATE `tblemployee` SET `emp_name`='Murimi Gosiani',`emp_salary`='100000' WHERE 2";
+    $sql = "UPDATE `tblemployee` SET `emp_name`='Murimi Gosiani',`emp_salary`='150000' WHERE 1";
     
     $result = mysqli_query($conn,$sql);
 

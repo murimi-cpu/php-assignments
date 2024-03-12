@@ -6,27 +6,26 @@
   <title>Document</title>
 </head>
 <body>
+  <pre>
   <form action="register.php" method ="post">
     <label for="fullname">fullname</label>
-    <input type="text" name = "fullname" placeholder="Enter Full Name">
+    <input type="name" name="fullname" placeholder="Enter Full Name">
 
-    <label for="fullname">email</label>
-    <input type="text" name = "email" placeholder="Enter your Email">
+    <label for="email">email</label>
+    <input type="email" name = "email" placeholder="Enter your Email">
 
-    <label for="fullname">fullname</label>
-    <input type="text" name = "fullname" placeholder="Full Name">
+    <label for="phone">phone</label>
+    <input type="number" name = "phone" placeholder="Enter you phone:">
 
-    <label for="fullname">fullname</label>
-    <input type="text" name = "fullname" placeholder="Full Name">
+    <label for="address">address</label>
+    <input type="text" name="address" placeholder="Enter your address:">
 
-    <label for="fullname">fullname</label>
-    <input type="text" name = "fullname" placeholder="Full Name">
-
-
+    <label for="password">password</label>
+    <input type="password" name="password" placeholder="Enter your password:">
 
 
-
-
+<button type="submit">Submit</button>
+</pre>
   </form>
 </body>
 </html>
