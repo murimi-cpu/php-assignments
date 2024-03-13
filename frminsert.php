@@ -5,9 +5,8 @@ $passord = "";
 $dbname = "school";
 $conn = new mysqli($servername, $username, $passord, $dbname);
 if ($conn->connect_error) 
-   die("". $conn->connect_error);
+   die("Connection failed". $conn->connect_error);
 
-$sql = "";
 if( $_SERVER["REQUEST_METHOD"] == "POST" )
         // sanitinze the input to avoid crossscripting injections for security
         $parent_name = htmlspecialchars($_POST["parent_name"]);

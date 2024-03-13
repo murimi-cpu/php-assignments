@@ -6,6 +6,7 @@
     <title>Assignment form to insert data into database</title>
 </head>
 <body>
+    <pre>
     <form action="frminsert.php" method ="POST">
         <label for="text">Parent Name</label>
         <input type="name" name= parent_name placeholder="Enter your parent name">
@@ -25,5 +26,6 @@
         <button type="submit">submit</button>
 
     </form>
+</pre>
 </body>
 </html>
