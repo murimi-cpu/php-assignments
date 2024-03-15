@@ -34,7 +34,7 @@ $dbname = "school";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if(!$conn){
+if(!$conn) {
 
     echo"Connection failed ".mysqli_connect_error();
     exit();
@@ -43,16 +43,23 @@ if(!$conn){
         // $result = mysqli_query($conn, $sql);
 
 
-        if($_SERVER)["REQUEST_METHOD"] = "POST"{
-            
-
     
 
-}
+    if($_SERVER)["REQUEST_METHOD"] = "POST"{
+                 $full_name = $_POST["name"];
+                 $email = $_POST["email"];
+                 $phone = $_POST["phone"];
+                 $address = $_POST[address];
+                 $password = $_POST[password]
+                                            }
 
 
+                 if(password == $password) {
 
 
+                 $sql = "INSERT INTO `tbluser` (`full_name`, `email`, `phone`, `address`, `password`) VALUES ('$full_name', '$email', '$phone ', ' $address', '$password')";
+
+    
 
 
 
