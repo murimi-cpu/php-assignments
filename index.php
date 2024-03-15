@@ -20,6 +20,9 @@
         <label for="city">City</label>
         <input type="city" name= city placeholder="Enter your City">
 
+        <label for="county">County</label>
+        <input type="county" name= county placeholder="Enter your County">
+
         <label for="country">Country</label>
         <input type="country" name= country placeholder="Enter your Country">
         
