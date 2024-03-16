@@ -6,72 +6,72 @@
     <title>Confirm Password</title>
 </head>
 <body>
-
+<pre>
 <form action="confirmpassword.php" method = "post">
 
-    <label for="student_name">Student Name:</label>
-    <input type="text" name="student_name" placeholder="Enter your name:">
+    <label for="user_name">Username:</label>
+    <input type="user_name" name="user_name" placeholder="Enter your username:">
 
-    <label for="admno">Admission Number:</label>
-    <input type="text" name="admno" placeholder="Enter your admno:">
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Enter your password:">
 
-    <label for="exam_name">Exam Nmae:</label>
-    <input type="exam_name" name="exam_name" placeholder="Enter exam_name:">
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="confirm_password" name="confirm_password" placeholder="confirm_password:">
 
-    <label for="marks">Student marks:</label>
-    <input type="marks" name="marks" placeholder="Enter your marks:">
     <button submit>submit</button>
  
  </form>   
 
-
-
+</pre>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "pakistan";
-$dbname = "school";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "school";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if(!$conn) {
+    if(!$conn) {
 
-    echo"Connection failed ".mysqli_connect_error();
-    exit();
-    
-        // $sql = "INSERT INTO `examination` (`examid`, `student_name`, `admno`, `exam_name`, `marks`) VALUES (NULL, 'Abdkadri Hussein', 'DCH200/506/2024', 'CAT1', '90')";
-        // $result = mysqli_query($conn, $sql);
+        echo"Connection failed ".mysqli_connect_error();
+        exit();
+    } 
+
+    else{ 
+        
+        if(($_SERVER)['REQUEST_METHOD'] == 'POST'){
+        
+        
+            $user_name = $_POST["user_name"];
+            $user_password = $_POST["password"];
+            $confirm_password = $_POST["confirm_password"];
+
+            if($confirm_password == $password){
+                $sql = "INSERT INTO `users` (`user_name`, `user_password`, `confirm_password`) VALUES ('$user_name', '$user_password', 'confirm_password')";
+                $result = mysqli_query($conn, $sql);
+                if($result){
+                    echo "<script>alert('Data Inserted  Successfully');</script>";
+
+            }
+            else{
+
+                echo "<script>alert('Data NOT Inserted  Successfully');</script>";
 
 
-    
-
-    if($_SERVER)["REQUEST_METHOD"] = "POST"{
-                 $full_name = $_POST["name"];
-                 $email = $_POST["email"];
-                 $phone = $_POST["phone"];
-                 $address = $_POST[address];
-                 $password = $_POST[password]
-                                            }
+                }
+        
+            
 
 
-                 if(password == $password) {
+
+            }
 
 
-                 $sql = "INSERT INTO `tbluser` (`full_name`, `email`, `phone`, `address`, `password`) VALUES ('$full_name', '$email', '$phone ', ' $address', '$password')";
+    }
 
-    
-
-
+        
+        
 
 
 ?>
 
-
-
-
-
-
-
-
-</body>
-</html>
