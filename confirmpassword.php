@@ -13,16 +13,21 @@
     <input type="user_name" name="user_name" placeholder="Enter your username:">
 
     <label for="user_password">User Password:</label>
-    <input type="user_password" name="user_password" placeholder="Enter your password:">
+    <input type="password" name="user_password" placeholder="Enter your password:">
 
     <label for="confirm_password">Confirm Password:</label>
-    <input type="confirm_password" name="confirm_password" placeholder="confirm_password:">
+    <input type="password" name="confirm_password" placeholder="confirm_password:">
 
     <button submit>submit</button>
  
  </form>   
 
 </pre>
+
+</body>
+</html>
+
+<!-- backend starts here -->
 
 
 <?php
@@ -49,14 +54,13 @@ else{
 
         if($user_password == $confirm_password){
 
-        $sql = "INSERT INTO `users` (`user_name`, `user_password`, `confirm_password`) VALUES ('$user_name', '$user_password', '$confirm_password')";
+        $sql = "INSERT INTO `users` (`user_name`, `user_password`) VALUES ('$user_name', '$user_password')";
         $result = mysqli_query($conn,$sql);
 
         if($result){
 
             echo "<script>alert('Data Inserted  Successfully');</script>";
-            
-           
+         
         }
         else{
 
