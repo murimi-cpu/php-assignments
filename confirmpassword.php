@@ -22,7 +22,7 @@
  
  </form>   
 
-</pre>
+ </pre>
 
 </body>
 </html>
@@ -59,12 +59,12 @@ else{
 
         if($result){
 
-            echo "<script>alert('Data Inserted  Successfully');</script>";
-         
-        }
-        else{
+            echo "<script>alert('Data Inserted  Successfully!');</script>";
+          }
 
-            echo '<script>alert("Your Password Does not match the confirm Password"); </script>';
+            else{
+
+             echo "<script>alert('Data NOT Inserted  Successfully Please try again!);</script>";
            }
         
        }
@@ -73,6 +73,7 @@ else{
 }
 
 }
+
 
 
 ?>
