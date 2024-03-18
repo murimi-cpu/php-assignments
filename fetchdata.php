@@ -1,3 +1,18 @@
+<?php
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
 
 
 
@@ -12,6 +27,8 @@ table {
   color: black;
   
 }
+
+
 a {
   color: green;
   text-decoration: none;
@@ -33,12 +50,15 @@ td, th {
 tr:hover {background-color: yellow;}
 /* tr:nth-child(even) { */
   /* background-color: #dddddd; */
+
+  /* tr:nth-child(even){background-color: #f2f2f2;} */
 /* } */
 </style>
 </head>
 <body>
 
 <h2>FETCH DATA FROM DATABASE USING PHP</h2>
+<!-- Fetching code starts here -->
 
 <table>
   <tr>
@@ -51,6 +71,7 @@ tr:hover {background-color: yellow;}
     <th>Update</th>
     <th>Delete</th>
   </tr>
+ 
   <tr>
     <td>Hussein Abdi</td>
     <td>hussein@gmail.com</td>
@@ -58,8 +79,8 @@ tr:hover {background-color: yellow;}
     <td>6309-00400</td>
     <td>Software Engineer</td>
     <td>Pakistan</td>
-    <td><a href="#">Update</td>
-    <td><a href="#">Delete</a></td>
+    <td><button>update</button color #dddddd></td>
+    <td><button>Delete</button color #02B00></td>
   </tr>
   <tr>
   <td>Kim c.</td>
@@ -68,8 +89,8 @@ tr:hover {background-color: yellow;}
     <td>613-40400</td>
     <td>Lecturer</td>
     <td>New Berlin, WI 53151</td>
-    <td><a href="#">Update</td>
-    <td><a href="#">Delete</a></td>
+    <td><button>update</button color #dddddd></td>
+    <td><button>Delete</button color #02B00></td>
   <tr>
   <td>Donna P. German</td>
     <td>murimi@gmail.com</td>
@@ -77,8 +98,8 @@ tr:hover {background-color: yellow;}
     <td>357 Joseph Street</td>
     <td>Pilot</td>
     <td>Austria</td>
-    <td><a href="#">Update</td>
-    <td><a href="#">Delete</a></td>
+    <td><button>update</button color #dddddd></td>
+    <td><button color #02B00>Delete</button></td>
   </tr>
   <tr>
   <td>Murimi James</td>
