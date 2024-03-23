@@ -27,16 +27,35 @@
     <label for="address">ID|Birth Cert|Passport</label>
     <input type="timestamp" name="id_birth" placeholder=" Enter your ID|Birth Cert|Passport :">
 
-    <label for="address">Course:</label>
-    <input type="select" name="course" placeholder="Enter your Course:">
+    <label for="course">Course:</label>
+<select name="course" id="course">
+  <option value="">Select Course</option>
+  <option value="Information Technology">Information Technology</option>
+  <option value="Computer Science">Computer Science</option>
+  <option value="Community Health">Community Health</option>
+  <option value="Social Work">Social Work</option>
+  <option value="Secretarial Studies">Secretarial Studies</option>
+  <option value="Fashion Design & Tailoring">Fashion Design & Tailoring</option>
+  <option value="Beauty therapy">Beauty therapy</option>
+  <option value="Cosmethology">Cosmethology</option>
+  <option value="Electrical Installation Power Option">Electrical Installation Power Option</option>
+  <option value="Welding & Fabrication">Welding & Fabrication</option>
+  <option value="Introduction to Artificial Intelligence (AI)">Introduction to Artificial Intelligence (AI)</option>
+  <option value="Data Science">Data Science</option>
+  <option value="Accountance">Accountance</option>
+</select>
 
-    <label for="address">level</label>
-    <input type="enum" name="level" placeholder="Enter Level:">
+    <label for="level">level</label>
+<select name="level" id="level">
+  <option value="level">Please choose Level</option>
+  <option value="Diploma">Diploma</option>
+  <option value="Certificate">Certificate</option>
+  <option value="Artisan Certificate">Artisan Certificate</option>
+  <option value="RPL">RPL</option>
 
-    <label for="address">Mode of Study</label>
-    <input type="enum" name=" 	modeofstudy" placeholder="Enter mode of study:">
+</select>
 
-    <label for="address">Grade</label>
+    <label for="Grade">Grade</label>
     <input type="text" name="grade " placeholder="Enter your Grade:">
 
     <label for="address">Payment Plan:</label>
@@ -44,6 +63,7 @@
     
     <label for="address">Choose Campus:</label>
     <input type="enum" name="campus" placeholder="Choose Campus:">
+    <input select>
 
 <button type="submit">Submit</button>
 </pre>

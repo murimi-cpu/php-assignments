@@ -18,11 +18,13 @@ else{
         $fullname = $_POST["fullname"];
         $email = $_POST["email"];
         $phone= $_POST["phone"];
-        $address=$_POST["address"];
+        $address = $_POST["address"]; 
+        $profession = $_POST["profession"];
+        $country =  $_POST["country"];
         $password = $_POST["password"];
 
         // insert date into tbluser
-        $sql = "INSERT INTO `tbluser` (`full_name`, `email`, `phone`, `address`, `password`) VALUES ('$fullname', '$email', '$phone', '$address', '$password')";
+        $sql = "INSERT INTO `tbluser` (`full_name`, `email`, `phone`, `address`, `password`) VALUES ('$fullname', '$email', '$phone', '$address',' $profession,'$country', '$password')";
         $result = mysqli_query($conn,$sql);
 
         if($result){

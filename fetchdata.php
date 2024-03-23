@@ -7,14 +7,10 @@
 
 
 
+
+
+
 ?>
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -57,7 +53,7 @@ tr:hover {background-color: yellow;}
 </head>
 <body>
 
-<h2>FETCH DATA FROM DATABASE USING PHP</h2>
+<div><h2>FETCH DATA FROM DATABASE USING PHP</h2></div>
 <!-- Fetching code starts here -->
 
 <table>
@@ -98,7 +94,7 @@ tr:hover {background-color: yellow;}
     <td>357 Joseph Street</td>
     <td>Pilot</td>
     <td>Austria</td>
-    <td><button>update</button color #dddddd></td>
+    <td><a href=""></a><button>update</button color #dddddd></td>
     <td><button color #02B00>Delete</button></td>
   </tr>
   <tr>

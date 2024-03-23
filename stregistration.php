@@ -15,13 +15,13 @@ else{
         // use superglobal variable to check request method and allow code to run if true
     if( $_SERVER["REQUEST_METHOD"] == "POST" )
         // sanitinze the input to avoid crossscripting injections for security
-        $student_name = $_POST["fullname"];
+        $student_name = $_POST["student_name"];
         $email = $_POST["email"];
-        $student_telno = $_POST["phone"];
-        $regdate=$_POST["regdate"];
+        $student_telno = $_POST["student_telno"];
+        $regdate = $_POST["regdate"];
         $county = $_POST["county"];
         $id_birth = $_POST["id_birth"];
-        $dob = $_POST["dob"];
+        // $dob = $_POST["dob"];
         $course = $_POST["course"];
         $level = $_POST["level"];
         $modeofstudy = $_POST["modeofstudy"];
@@ -34,7 +34,7 @@ else{
 
 
         // insert date into tbluser
-        $sql = "INSERT INTO `tblstudents` (`student_name`, `email`, `student_telno`, `regdate`, `county`, `id_birth`, `dob`, `course`, `level`, `modeofstudy`, `grade`, `fee`, `campus`) VALUES ('MURIMI JAMES GOSIANI', 'murimi@gmail.com', '+254(0) 725945079', '2024-03-18', 'Nairobi', 'ID Card', '1990-03-18 16:57:40.000000', 'Computer Science', 'Diploma', 'Virtual Classes', 'B', 'Sponsored','campus')";
+        $sql = "INSERT INTO `tblstudents` (`student_name`, `email`, `student_telno`, `regdate`, `county`, `id_birth`, `dob`, `course`, `level`, `modeofstudy`, `grade`, `fee`, `campus`) VALUES ('$student_name', ' $email', '$student_telno', '$regdate', ' $county', '$id_birth', ' $course', '$level', '$modeofstudy', ' $grade', '$fee ',' $campus')";
 
         if($result){
 
