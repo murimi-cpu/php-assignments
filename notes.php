@@ -22,3 +22,5 @@ require
  while access many different databases, the best db connection method is:pdo
 <!-- fetch functions -->
  Fetch one and one row,many rows,i column,many columns
+
+ what if we have many areas to make deletes? for this we only have one delete file

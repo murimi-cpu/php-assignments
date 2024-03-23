@@ -57,7 +57,7 @@
     <th>Update</th>
     <th>Delete</th>
   </tr>
-  
+  <tbody>
   <tr>
     <td>Hussein Abdi</td>
     <td>hussein@gmail.com</td>
@@ -65,7 +65,7 @@
     <td>6309-00400</td>
     <td>Software Engineer</td>
     <td>Pakistan</td>
-    <td><button>update</button color #dddddd></td>
+    <td><button><a href="personnel.php?delete_id= $row['user_id']">Update</a></button></td>
     <td><button>Delete</button color #02B00></td>
   </tr>
   <tr>
@@ -75,7 +75,7 @@
     <td>613-40400</td>
     <td>Lecturer</td>
     <td>New Berlin, WI 53151</td>
-    <td><button>update</button color #dddddd></td>
+    <td><button><a href="personnel.php?delete_id= $row['user_id']">Update</a></button></td>
     <td><button>Delete</button color #02B00></td>
   <tr>
   <td>Donna P. German</td>
@@ -84,7 +84,7 @@
     <td>357 Joseph Street</td>
     <td>Pilot</td>
     <td>Austria</td>
-    <td><a href=""></a><button>update</button color #dddddd></td>
+    <td><button><a href="personnel.php?delete_id= $row['user_id']">Update</a></button></td>
     <td><button color #02B00>Delete</button></td>
   </tr>
   <tr>
@@ -94,7 +94,7 @@
     <td>63-40400</td>
     <td>Software Developer</td>
     <td>UK</td>
-    <td><a href="#">Update</td>
+    <td><button><a href="personnel.php?delete_id= $row['user_id']">Update</a></button></td>
     <td><a href="#">Delete</a></td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@
     <td>434 Murphy Court</td>
     <td>Software Developer</td>
     <td>Canada</td>
-    <td><a href="#">Update</td>
+    <td><button><a href="personnel.php?delete_id= $row['user_id']">Update</a></button></td>
     <td><a href="#">Delete</a></td>
   </tr>
   <tr>
@@ -114,27 +114,12 @@
     <td>630-40400</td>
     <td>Software Developer</td>
     <td>Italy</td>
-    <td><a href="#">Update</td>
+    <td><button><a href="personnel.php?delete_id= $row['user_id']">Update</a></button></td>
     <td><a href="#">Delete</a></td>
   </tr>
+  </tbody>
 
-
-  
-</body>
-
-
-
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-
-</head>
-<body>
-
-
-
+</table> 
 </body>
 </html>
 
