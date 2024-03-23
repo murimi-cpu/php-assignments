@@ -1,38 +1,35 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+include "connection.php";
 
-$database = "school";
-
-$conn = mysqli_connect($servername,$username,$password,$database);
-
-if(!$conn){
-
-    echo "You are not connected Successfully".mysqli_connect_error();
-}
-else{
+        // posted from form.php file
         // use superglobal variable to check request method and allow code to run if true
     if( $_SERVER["REQUEST_METHOD"] == "POST" )
         // sanitinze the input to avoid crossscripting injections for security
-        $fullname = $_POST["fullname"];
-        $email = $_POST["email"];
-        $phone= $_POST["phone"];
-        $address = $_POST["address"]; 
-        $profession = $_POST["profession"];
-        $country =  $_POST["country"];
-        $password = $_POST["password"];
+        $full_name = htmlspecialchars($_POST["full_name"]) ;
+        $email = htmlspecialchars($_POST["email"]);
+        $phone= htmlspecialchars($_POST["phone"]);
+        $address = htmlspecialchars($_POST["address"]); 
+        $profession = htmlspecialchars($_POST["profession"]);
+        $country =  htmlspecialchars($_POST["country"]);
 
         // insert date into tbluser
-        $sql = "INSERT INTO `tbluser` (`full_name`, `email`, `phone`, `address`, `password`) VALUES ('$fullname', '$email', '$phone', '$address',' $profession,'$country', '$password')";
+        $sql = "INSERT INTO `tbluser` (`full_name`, `email`, `phone`, `address`, `profession`, `country`) VALUES ('$full_name', '$email', '$phone', '$address',' $profession,'$country')";
         $result = mysqli_query($conn,$sql);
 
         if($result){
-
-            echo "Data inserted Successfully:";
+            $query = "SELECT * FROM tbluser";
+            $data = mysqli_query($conn,$query);
+            $result3 = mysqli_num_rows($data);
+            if($result3){
+            while($row = mysqli_fetch_array($data)){
+               
+              }
+            }
+              
+            
         }
         else{
 
             echo "Data Not Inserted Successfully".mysqli_connect_error();
         }
-}
+

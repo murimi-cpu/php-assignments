@@ -1,24 +1,26 @@
 <?php 
 
-$servername = "localhost";
+// $servername = "localhost";
 
-$username = "root";
+// $username = "root";
 
-$password = "";
+// $password = "";
 
-$database = "school";
+// $database = "school";
 
-$conn = mysqli_connect($servername,$username,$password,$database);
+// $conn = mysqli_connect($servername,$username,$password,$database);
 
-if(!$conn){
+// if(!$conn){
 
-    echo "Not connected" . mysqli_connect_error();
-}
-else{
+//     echo "Not connected" . mysqli_connect_error();
+// }
+// else{
+    
+include "connection.php";
 
     $emp_name = "Murimi James";
     $emp_salary = "120,000";
-    $sql = "UPDATE `tblemployee` SET `emp_name`='Murimi Gosiani',`emp_salary`='150000' WHERE 1";
+    $sql = "UPDATE `tblemployee` SET `emp_name`='Murimi Gosiani',`emp_salary`='200000' WHERE 1";
     
     $result = mysqli_query($conn,$sql);
 
@@ -31,7 +33,6 @@ else{
         echo "Not Updated Successfully".mysqli_error($conn);
     }
 
-}
 
 
 

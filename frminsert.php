@@ -1,11 +1,14 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$passord = "";
-$dbname = "school";
-$conn = new mysqli($servername, $username, $passord, $dbname);
-if ($conn->connect_error) 
-   die("Connection failed". $conn->connect_error);
+// posted from index.php file
+// $servername = "localhost";
+// $username = "root";
+// $passord = "";
+// $dbname = "school";
+// $conn = new mysqli($servername, $username, $passord, $dbname);
+// if ($conn->connect_error) 
+//    die("Connection failed". $conn->connect_error);
+
+include"connection.php";
 
 if( $_SERVER["REQUEST_METHOD"] == "POST" )
         // sanitinze the input to avoid crossscripting injections for security
@@ -24,10 +27,10 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" )
 
         if($result){
 
-            echo "Data inserted Successfully:";
+            header("Location: index.php");
         }
         else{
 
             echo "Data Not Inserted Successfully".mysqli_connect_error();
         }
-mysqli_close($conn);
+            mysqli_close($conn);

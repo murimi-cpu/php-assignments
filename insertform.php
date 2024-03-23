@@ -22,4 +22,3 @@ else{
     echo "You are not connected successfully". mysqli_connect_error();
 }
 
-?>

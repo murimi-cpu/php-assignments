@@ -1,18 +1,20 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+include "connection.php";
 
-$database = "school";
+// posted from stfrmregister.php
 
-$conn = mysqli_connect($servername,$username,$password,$database);
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $database = "school";
 
-if(!$conn){
+// $conn = mysqli_connect($servername,$username,$password,$database);
+// if(!$conn){
+//     echo "You are not connected Successfully".mysqli_connect_error();
+// }// else{
 
-    echo "You are not connected Successfully".mysqli_connect_error();
-}
-else{
         // use superglobal variable to check request method and allow code to run if true
+        
     if( $_SERVER["REQUEST_METHOD"] == "POST" )
         // sanitinze the input to avoid crossscripting injections for security
         $student_name = $_POST["student_name"];
@@ -21,7 +23,7 @@ else{
         $regdate = $_POST["regdate"];
         $county = $_POST["county"];
         $id_birth = $_POST["id_birth"];
-        // $dob = $_POST["dob"];
+        $dob = $_POST["dob"];
         $course = $_POST["course"];
         $level = $_POST["level"];
         $modeofstudy = $_POST["modeofstudy"];
@@ -44,7 +46,7 @@ else{
 
             echo "Data Not Inserted Successfully".mysqli_connect_error();
         }
-}
+
 
 
 

@@ -1,55 +1,8 @@
-<?php
-
-
-
-
-
-
-
-
-
-
-
-?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  color: black;
-  
-}
-
-
-a {
-  color: green;
-  text-decoration: none;
-}
-
-
-th{
- background-color: #04AA6D;
-color: white;
-
-
-}
-td, th {
-  border: 1px solid black;
-  text-align: left;
-  padding: 2px;
-  
-}
-tr:hover {background-color: yellow;}
-/* tr:nth-child(even) { */
-  /* background-color: #dddddd; */
-
-  /* tr:nth-child(even){background-color: #f2f2f2;} */
-/* } */
-</style>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
 

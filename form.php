@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Personnel Form</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <pre>
     
-  <form action="register.php" method ="post">
-    <label for="fullname">fullname</label>
-    <input type="name" name="fullname" placeholder="Enter Full Name">
+  <form action="personnel.php" method ="post">
+    <label for="full_name">fullname</label>
+    <input type="name" name="full_name" placeholder="Enter Full Name">
 
     <label for="email">email</label>
     <input type="email" name = "email" placeholder="Enter your Email">
@@ -22,63 +23,27 @@
     <input type="text" name="address" placeholder="Enter your address:">
 
     <label for="profession">Profession:</label>
-    <input type="text">
-   <select name="profession" id="profession">Select Country
+      <select  type="text" name="profession">
           <option value="profession">---Select---</option>
           <option value="Software Engineer">Software Engineer</option>
           <option value="Lecturer">Lecturer</option>
           <option value=" Pilot">Pilot</option>
           <option value=" Software Developer"> Software Developer</option>
-   </select>
+    </select>
+
     <label for="country">Country</label>
     <input type="text" name="country" placeholder="Enter your Country:">
 
-    <label for="password">password</label>
-    <input type="password" name="password" placeholder="Enter your password:">
-
-
-<button type="submit">Submit</button>
+      <button type="submit">Submit</button>
 </pre>
   </form>
 
 
   <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  color: black;
-  
-}
 
-
-a {
-  color: green;
-  text-decoration: none;
-}
-
-
-th{
- background-color: #04AA6D;
-color: white;
-
-
-}
-td, th {
-  border: 1px solid black;
-  text-align: left;
-  padding: 2px;
-  
-}
-tr:hover {background-color: yellow;}
-/* tr:nth-child(even) { */
-  /* background-color: #dddddd; */
-
-  /* tr:nth-child(even){background-color: #f2f2f2;} */
-/* } */
 </style>
+<center><h2>FETCH DATA FROM DATABASE      [PERSONNEL.PHP FILE]         USING PHP</h2></center>
 
-<div><h2>FETCH DATA FROM DATABASE USING PHP</h2></div>
 <!-- Fetching code starts here -->
 
 <table>
@@ -92,7 +57,7 @@ tr:hover {background-color: yellow;}
     <th>Update</th>
     <th>Delete</th>
   </tr>
- 
+  
   <tr>
     <td>Hussein Abdi</td>
     <td>hussein@gmail.com</td>
@@ -152,7 +117,9 @@ tr:hover {background-color: yellow;}
     <td><a href="#">Update</td>
     <td><a href="#">Delete</a></td>
   </tr>
-</table>
+
+
+  
 </body>
 
 
