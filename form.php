@@ -8,8 +8,8 @@
 </head>
 <body>
   <pre>
-    
-  <form action="personnel.php" method ="post">
+   <div class="form">
+   <form action="personnel.php" method ="post">
     <label for="full_name">fullname</label>
     <input type="name" name="full_name" placeholder="Enter Full Name">
 
@@ -37,12 +37,14 @@
       <button type="submit">Submit</button>
 </pre>
   </form>
+   </div> 
+  
 
 
   <style>
 
 </style>
-<center><h2>FETCH DATA FROM DATABASE      [PERSONNEL.PHP FILE]         USING PHP</h2></center>
+<h2>FETCH DATA FROM DATABASE      [PERSONNEL.PHP FILE]         USING PHP</h2>
 
 <!-- Fetching code starts here -->
 
