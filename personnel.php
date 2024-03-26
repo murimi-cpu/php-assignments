@@ -15,6 +15,7 @@ $country = htmlspecialchars($_POST["country"]);
 $sql= "INSERT INTO `tbluser` (`full_name`, `email`, `phone`, `address`, `profession`, `country`) VALUES ('$full_name', '$email', '$phone', '$address', '$profession', '$country')";
 $result = mysqli_query($conn,$sql);
 if($result){
+    
     header("Location: form.php");
 
 }
