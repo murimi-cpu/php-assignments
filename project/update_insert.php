@@ -1,23 +1,18 @@
- <?php
 
+<?php
 include "connection.php";
-
-$userid =$_GET['userid'];
-
-
-if( $_SERVER["REQUEST_METHOD"] == "POST" )
-
+if( $_SERVER["REQUEST_METHOD"] == "POST" ){
 $full_name = htmlspecialchars($_POST["full_name"]);
 $email = htmlspecialchars($_POST["email"]);
 $phone = htmlspecialchars($_POST["phone"]);
 $address = htmlspecialchars($_POST["address"]);
 $profession = htmlspecialchars($_POST["profession"]);
 $country = htmlspecialchars($_POST["country"]);
+$city = htmlspecialchars($_POST["city"]);
 
+$id =$_GET['dataupdate'];
 // echo";
-$sql = "UPDATE 'tbluser' SET 'full_name' = '$full_name',	'email'= '$email',	'phone'=' $phone', 	'address'='$address', 	'profession'='$profession', 'city'='$city', 'country'='$country' 	
-
-WHERE userid = $userid";
+$sql= "UPDATE `tbluser` SET `full_name` = '$full_name', `profession` = '$profession', `country` = '$country', `city`= '$city',`address`= '$address',`email`='$email', `phone`='$phone'  WHERE `tbluser`.`userid` = $id";
 
 $result = mysqli_query($conn,$sql);
 if($result){
@@ -30,3 +25,9 @@ if($result){
 else{
     echo "Data not Deleted ssuccesfully";
    }   exit();
+}
+   ?>
+
+    
+
+

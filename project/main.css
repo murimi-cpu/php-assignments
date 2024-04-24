@@ -1,0 +1,50 @@
+body{
+  background-color: #f3f3f3 ;
+}
+
+.form{
+  text-align: left;
+  border: 1px solid  rgb(0, 255, 0);;
+  padding: 10px;
+  padding-bottom: 30px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  background: color #cae1f7;
+  box-shadow: 0 2px 2px;
+}
+
+h2{
+  text-align: center;
+  color: red;
+  border-radius: 5px; 
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+  }
+  a {
+    color: green;
+    text-decoration: none;
+  }
+  th{
+   background-color: #035a0a;
+  color: white;
+  }
+  td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 2px;  
+  }
+  tr:hover {background-color: yellow;}
+  /* tr:nth-child(even) { */
+    /* background-color: #dddddd; */
+    /* tr:nth-child(even){background-color: #f2f2f2;} */
+  /* } */
+
+  /* div {
+  margin: 80px;
+  border: 1px solid #4CAF50;
+} */

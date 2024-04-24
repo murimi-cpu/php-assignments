@@ -12,7 +12,7 @@
 <body>
     <pre>
    <div class="form">
-   <form action="form.php" method ="post">
+   <form action="insert.php" method ="post">
     <label for="full_name">fullname</label>
     <input type="name" name="full_name" placeholder="Enter Full Name">
 
@@ -52,27 +52,6 @@
 
     <?php
 include "connection.php";
-if( $_SERVER["REQUEST_METHOD"] == "POST" )
-
-$full_name = htmlspecialchars($_POST["full_name"]);
-$email = htmlspecialchars($_POST["email"]);
-$phone = htmlspecialchars($_POST["phone"]);
-$address = htmlspecialchars($_POST["address"]);
-$profession = htmlspecialchars($_POST["profession"]);
-$city = htmlspecialchars($_POST["city"]);
-$country = htmlspecialchars($_POST["country"]);
-
-$sql= "INSERT INTO `tbluser` (`full_name`, `email`, `phone`, `address`, `profession`,`city`, `country`) VALUES ('$full_name', '$email', '$phone', '$address', '$profession', '$city', '$country')";
-$result = mysqli_query($conn,$sql);
-if($result){
-    
-  echo "<script>alert('Data inserted Successfully!');</script>";
-
-}
-else{
-
-    echo "Data Not Inserted Successfully".mysqli_error($conn);
-}
 
   $query = "SELECT * FROM `tbluser`";
   $result2 = mysqli_query($conn,$query);
@@ -112,13 +91,16 @@ while( $row =mysqli_fetch_assoc($result2)){
     <td>'.$row['country'].'</td>
     <td><a href="update.php?userid='.$row['userid'].'"><button>Update</button></a></td>
     <td><a href="delete.php?del='.$row['userid'].'"><button>Delete</button></a></td>
-  </tr>';
+  </tr> 
+  
+  </tbody> ';
 }
+
+echo'</table>';
   }
 
 ?>
-    </tbody>
-    </table>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>
