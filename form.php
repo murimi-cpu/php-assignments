@@ -110,7 +110,7 @@ while( $row =mysqli_fetch_assoc($result2)){
     <td>'.$row['profession'].'</td>
     <td>'.$row['city'].'</td>
     <td>'.$row['country'].'</td>
-    <td><button><a href=" =">Update</a></button></td>
+    <td><a href="update.php?userid='.$row['userid'].'"><button>Update</button></a></td>
     <td><a href="delete.php?del='.$row['userid'].'"><button>Delete</button></a></td>
   </tr>';
 }
